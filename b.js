@@ -1,0 +1,1 @@
+window.greet = window.greet || "hii"

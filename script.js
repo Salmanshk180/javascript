@@ -463,6 +463,11 @@
 
 // Pollyfill : code that adds a feature which the engine may lack.
 
+// // <-----------------Array and for in  ------------>
+
+// Array.prototype.myCustomFeature = "cool";
+// var arr1 = [1,2,3,4]
+// console.log(arr1.__proto__);
 
 // // <---------------- Class --------------------->
 

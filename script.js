@@ -562,33 +562,33 @@
 
 // // <------------ Promise -------------->
 
-function getCheese() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const cheese = "🧀";
-      resolve(cheese);
-    }, 2000);
-  });
-}
+// function getCheese() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const cheese = "🧀";
+//       resolve(cheese);
+//     }, 2000);
+//   });
+// }
 
-function makeDough(cheese) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const dough = cheese + "🫓";
-      resolve(dough);
-      // reject("Bad cheese");
-    }, 2000);
-  });
-}
+// function makeDough(cheese) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const dough = cheese + "🫓";
+//       resolve(dough);
+//       // reject("Bad cheese");
+//     }, 2000);
+//   });
+// }
 
-function bakePizza(dough) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const pizza = dough + "🍕";
-      resolve(pizza);
-    }, 2000);
-  });
-}
+// function bakePizza(dough) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const pizza = dough + "🍕";
+//       resolve(pizza);
+//     }, 2000);
+//   });
+// }
 
 // getCheese()
 //   .then((cheese) => {
@@ -628,3 +628,172 @@ function bakePizza(dough) {
 // }
 
 // orderPizza();
+
+// // <--------- For Loop ---------->
+
+// var colors = ['red', 'green', 'blue'];
+// for (var i = 0;i < colors.length;i++) {
+//     console.log(colors[i]);
+// }
+
+// // <-------- For Each Loop ---------->
+
+// var colors = ['red', 'green', 'blue'];
+// colors.forEach(function (color) {
+//     console.log(color);
+// })
+
+// // <---------- Map ----------->
+
+// var numbers = [1,2,3];
+// var doubleNumbers = numbers.map((number)=>{
+//    return number*3;
+// })
+
+// console.log(doubleNumbers);
+
+// // <---------- Filetr ------------->
+
+// const products = [
+//     {"name":"cucumber","type":"vegetables"},
+//     {"name":"banana","type":"fruits"},
+//     {"name":"cerely","type":"vegetables"},
+//     {"name":"orange","type":"fruits"},
+
+// ]
+
+// let filteredProducts = products.filter(product => product.type === 'vegetables');
+
+// console.log(filteredProducts);
+
+// // <----------- Reduce --------->
+
+// var array = [10,20,30];
+
+// var arraySum = array.reduce((sum,number)=>{
+//     return sum+number
+// },0)
+
+// console.log(arraySum);
+
+// function balancedParans(string) {
+//   return !string.split("").reduce((previous,char)=>{
+//     if(previous<0){return previous;}
+//         if(char === "("){ return ++previous; };
+//         if(char === ")"){ return --previous; }
+//         return previous;
+//   },0);
+// }
+
+// console.log(balancedParans("(())())"));
+
+// const array = [1, 2, 3, [4, 5], [[6, 7], 8, 9]];
+
+// function flattenArray(arr) {
+//   return arr.reduce((acc, curVal) => {
+//     if (Array.isArray(curVal)) {
+//       return acc.concat(flattenArray(curVal));
+//     } else {
+//       return acc.concat(curVal);
+//     }
+//   }, []);
+// }
+
+// let flatArray = flattenArray(array);
+
+// console.log(flatArray);
+
+// const a = prompt("enter number a:");
+// const b = prompt("enter number b:");
+// function sum(a, b) {
+//     return Number(a) + Number(b);
+// }
+// console.log(sum(a,b));
+
+// const numbers = [20, 40, 120, 12, 47];
+// function findMaxNumber(arr) {
+//   return Math.max(...arr);
+// }
+// console.log(findMaxNumber(numbers));
+// let max = numbers[0]
+// numbers.forEach(element => {
+//     if (element > max){
+//         max = element;
+//     }
+// });
+
+// console.log(max);
+
+// var name = "nayan";
+// function isPallindrome(string) {
+//     return string === string.split("").reverse().join("");
+// }
+// console.log(isPallindrome(name));
+
+// var a = "javascript";
+// function reverseString(string) {
+//   return string.split("").reverse().join("");
+// }
+// console.log(reverseString(a));
+
+// var numbers = [5, 7, 12, 13, 15,16, 17, 19, 20];
+// function isNumberEven(numbers) {
+//   return numbers.filter((number) => {
+//     return number % 2 == 0;
+//   });
+// }
+// console.log(isNumberEven(numbers));
+
+// var num = 4;
+
+// function facorial(number){
+//     if(number==0||number==1){
+//         return 1;
+//     }
+//     else{
+//         return number * facorial(number-1);
+//     }
+// }
+
+// console.log(facorial(num));
+
+// var numbers = [1, 2, 3, [4, 5], 6, [[7, 8], 9]];
+// var signleArray = function (numbers) {
+//   return numbers.reduce((arr, num) => {
+//     if(Array.isArray(num)){
+//         return arr.concat(signleArray(num));
+//     }
+//     return arr.concat(num);
+//   }, []);
+// };
+// console.log( signleArray(numbers));
+// const max = Math.max(...signleArray(numbers));
+// console.log(max);
+
+// program to generate fibonacci series up to n terms
+
+// take input from the user
+// const number = 5;
+// let n1 = 0, n2 = 1, nextTerm;
+
+// console.log('Fibonacci Series:');
+
+// for (let i = 1; i <= number; i++) {
+//     console.log(n1);
+//     nextTerm = n1 + n2;
+//     n1 = n2;
+//     n2 = nextTerm;
+// }
+
+// var cities = ["surat", "mumbai", "delhi"];
+// var makeCapitalize = function (array) {
+//   return array.map((element) => {
+//     return element[0].toUpperCase() + element.slice(1);
+//   });
+// };
+
+// console.log(makeCapitalize(cities));
+
+// var x = 32243;
+// var y = String(x);
+// console.log(Number(y.split("").reverse().join("")));
